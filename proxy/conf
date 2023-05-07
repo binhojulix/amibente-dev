@@ -1,0 +1,27 @@
+upstream dev-python {
+    server dev_python:5001;
+}
+  
+upstream dev-nodejs {
+    server dev_nodejs:3001;
+}
+
+
+server {    
+    listen 80;
+    server_name localhost;
+
+
+    location /python {
+        proxy_pass http://dev-python/;
+    }
+
+    location /nodejs {
+        proxy_pass http://dev-nodejs/;
+     }
+
+    location / {
+        index index.html;
+    }
+
+}
