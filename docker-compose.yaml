@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  dev-nodejs:
+  
+    build:
+      context: dev-nodejs
+      dockerfile: Dockerfile.dev
+    container_name: dev-nodejs
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./dev-nodejs:/app/
+  dev-python:
+    build:
+      context: dev-python
+      dockerfile: Dockerfile.dev
+    container_name: dev-python
+    ports:
+      - "5001:5001"
+    volumes:
+      - ./dev-python:/app/
