@@ -13,8 +13,8 @@ services:
 
 
   dev-python:
-    container_name: dev_python
-    hostname: db_python
+    container_name: dev_python2
+    hostname: db_python2
     build:
       context: dev-python
       dockerfile: Dockerfile.dev
