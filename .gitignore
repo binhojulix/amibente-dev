@@ -1,0 +1,23 @@
+# Node.js with Express
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Python with Flask
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+*.egg
+# venv
+
+
+
+# General
+.idea/
+*.log
+*.swp
+*.swo
+.DS_Store
