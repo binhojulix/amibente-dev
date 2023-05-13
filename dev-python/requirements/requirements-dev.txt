@@ -5,3 +5,4 @@ flask-migrate
 flask_cors
 pymysql
 pytest
+coverage

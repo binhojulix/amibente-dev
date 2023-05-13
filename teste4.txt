@@ -1,0 +1,15 @@
+Ocorreu uma exceção: RuntimeError
+A 'SQLAlchemy' instance has already been registered on this Flask app. Import and use that instance instead.
+  File "/com.docker.devenvironments.code/dev-python/app.py", line 21, in create_app
+    db = SQLAlchemy(config.APP)
+RuntimeError: A 'SQLAlchemy' instance has already been registered on this Flask app. Import and use that instance instead.
+
+    config = app_config[app_active]
+    app = Flask(__name__)
+    app.config.from_object(config)
+    app.config.from_pyfile('config.py')
+    app.config['SQLALCHEMY_DATABASE_URI'] = config.SQLALCHEMY_DATABASE_URI 
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    db = SQLAlchemy(config.APP)
+    migrate = Migrate(app, db)
+    db.init_app(app)
