@@ -2,9 +2,12 @@ FROM python:3.8-alpine
 
 WORKDIR /app
 
-COPY requirements/requirements-dev.txt ./
+ENV FLASK_APP=run.py
+ENV FLASK_ENV=development
 
-RUN pip install -r requirements-dev.txt
+COPY requirements.txt ./
+
+RUN pip install -r requirements.txt
 
 COPY . .
 
