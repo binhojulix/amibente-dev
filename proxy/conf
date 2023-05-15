@@ -1,5 +1,5 @@
 upstream dev-python {
-    server dev_python:5001;
+    server dev_python:5000;
 }
   
 upstream dev-nodejs {
