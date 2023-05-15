@@ -8,6 +8,7 @@ def hello():
     a = 10 + 10
     b = 30 + 30
     c = 30 + 30
+    d = 44
     return "Flask inside Docker 2!!"
 
 
